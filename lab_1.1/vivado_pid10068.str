@@ -1,0 +1,276 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 10068
+License: Customer
+
+Current time: 	Sat Feb 23 15:32:01 EET 2019
+Time zone: 	Eastern European Time (Asia/Istanbul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 54 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	D:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	mcagr
+User home directory: C:/Users/mcagr
+User working directory: C:/Users/mcagr/lab_1.1
+User country: 	TR
+User language: 	tr
+User locale: 	tr_TR
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2018.3
+RDI_DATADIR: D:/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: D:/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/mcagr/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/mcagr/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/mcagr/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/mcagr/lab_1.1/vivado.log
+Vivado journal file location: 	C:/Users/mcagr/lab_1.1/vivado.jou
+Engine tmp dir: 	C:/Users/mcagr/lab_1.1/.Xil/Vivado-10068-DESKTOP-FQHR785
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2018.3
+XILINX_SDK: D:/Xilinx/SDK/2018.3
+XILINX_VIVADO: D:/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 550 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\mcagr\lab_1.1\lab_1.1.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/mcagr/lab_1.1/lab_1.1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/mcagr/lab_1.1/lab_1.1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 568 MB. GUI used memory: 44 MB. Current time: 2/23/19, 3:32:03 PM EET
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 100 MB (+102784kb) [00:00:27]
+// [Engine Memory]: 608 MB (+486332kb) [00:00:27]
+// WARNING: HEventQueue.dispatchEvent() is taking  6757 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1084 ms.
+// [Engine Memory]: 661 MB (+23457kb) [00:00:33]
+// WARNING: HEventQueue.dispatchEvent() is taking  1611 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:13 . Memory (MB): peak = 677.828 ; gain = 92.129 
+// Project name: lab_1.1; location: C:/Users/mcagr/lab_1.1; part: xc7z020clg484-1
+// HMemoryUtils.trashcanNow. Engine heap size: 733 MB. GUI used memory: 48 MB. Current time: 2/23/19, 3:32:19 PM EET
+// [Engine Memory]: 733 MB (+40246kb) [00:00:38]
+// WARNING: HEventQueue.dispatchEvent() is taking  1126 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 423ms to process. Increasing delay to 3000 ms.
+dismissDialog("Open Project"); // bx (cp)
+// a (cp): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 25 seconds
+selectButton(PAResourceItoN.MainToolbarMgr_OPEN, (String) null); // aA (f, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // af (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cp): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+selectComboBox(RDIResource.HJFileChooserRecentListPreview_RECENT_DIRECTORIES, "C:/Users/mcagr/lab_1.1", 7); // ak (ag, JDialog)
+// Elapsed time: 19 seconds
+String[] filenames31467 = {"C:/Users/mcagr/lab_1.1/lab1_template/ascii_rom.vhd", "C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd", "C:/Users/mcagr/lab_1.1/lab1_template/debounce.vhd", "C:/Users/mcagr/lab_1.1/lab1_template/delay.vhd", "C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd", "C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd", "C:/Users/mcagr/lab_1.1/lab1_template/oled_init.vhd", "C:/Users/mcagr/lab_1.1/lab1_template/spi_ctrl.vhd"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 32 seconds
+dismissDialog("Add Sources"); // c (cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bx (cp):  Add Sources  : addNotify
+// Tcl Message: add_files -norecurse {C:/Users/mcagr/lab_1.1/lab1_template/delay.vhd C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd C:/Users/mcagr/lab_1.1/lab1_template/debounce.vhd C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd C:/Users/mcagr/lab_1.1/lab1_template/oled_init.vhd C:/Users/mcagr/lab_1.1/lab1_template/ascii_rom.vhd C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd C:/Users/mcagr/lab_1.1/lab1_template/spi_ctrl.vhd} 
+dismissDialog("Add Sources"); // bx (cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 110 MB (+4978kb) [00:01:54]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 11 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (D, cp)
+// PAPropertyPanels.initPanels (mod_mul_with_oled.vhd) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd)]", 12, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), Debouncing : debounce(logic) (debounce.vhd)]", 14, false, false, false, false, false, true); // B (D, cp) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("mod_mul_with_oled.vhd", 70, 40); // cl (w, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, MonPro.vhd]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, MonPro.vhd]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, MonPro.vhd]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+// ad (cp): Unable to Open File: addNotify
+selectButton(PAResourceOtoP.OpenFileAction_OK, "OK"); // a (ad)
+dismissDialog("Unable to Open File"); // ad (cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, spi_ctrl.vhd]", 11, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, MonPro.vhd]", 3, false, true, false, false, false, false); // B (D, cp) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, ModMul.vhd]", 2, false, true, false, false, false, false); // B (D, cp) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, MonPro.vhd]", 3, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+// 'c' command handler elapsed time: 16 seconds
+dismissDialog("Remove Sources"); // aE (cp)
+// aE (cp): Remove Sources: addNotify
+// bx (aE):  Remove Sources : addNotify
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/ModMul.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/MonPro.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/Desktop/lab1_template/ascii_rom.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/Desktop/lab1_template/bcd_ascii.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/Desktop/lab1_template/debounce.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/Desktop/lab1_template/delay.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/Desktop/lab1_template/mod_mul_with_oled.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/Desktop/lab1_template/oled_drive.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/Desktop/lab1_template/oled_init.vhd] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/mcagr/Desktop/lab1_template/spi_ctrl.vhd] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/ModMul.vhd C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/MonPro.vhd C:/Users/mcagr/Desktop/lab1_template/ascii_rom.vhd C:/Users/mcagr/Desktop/lab1_template/bcd_ascii.vhd C:/Users/mcagr/Desktop/lab1_template/debounce.vhd C:/Users/mcagr/Desktop/lab1_template/delay.vhd C:/Users/mcagr/Desktop/lab1_template/mod_mul_with_oled.vhd C:/Users/mcagr/Desktop/lab1_template/oled_drive.vhd C:/Users/mcagr/Desktop/lab1_template/oled_init.vhd C:/Users/mcagr/Desktop/lab1_template/spi_ctrl.vhd} 
+dismissDialog("Remove Sources"); // bx (aE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, spi_ctrl.vhd]", 11, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, MonPro.vhd]", 3, false, true, false, false, false, false); // B (D, cp) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, ModMul.vhd]", 2, false, true, false, false, false, false); // B (D, cp) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, MonPro.vhd]", 3, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: remove_files  {C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/ModMul.vhd C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/MonPro.vhd C:/Users/mcagr/Desktop/lab1_template/ascii_rom.vhd C:/Users/mcagr/Desktop/lab1_template/bcd_ascii.vhd C:/Users/mcagr/Desktop/lab1_template/debounce.vhd C:/Users/mcagr/Desktop/lab1_template/delay.vhd C:/Users/mcagr/Desktop/lab1_template/mod_mul_with_oled.vhd C:/Users/mcagr/Desktop/lab1_template/oled_drive.vhd C:/Users/mcagr/Desktop/lab1_template/oled_init.vhd C:/Users/mcagr/Desktop/lab1_template/spi_ctrl.vhd} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), Debouncing : debounce(logic) (debounce.vhd)]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mod_mul_with_oled.vhd", 1); // k (j, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("mod_mul_with_oled.vhd", 223, 89); // cl (w, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), Debouncing : debounce(logic) (debounce.vhd)]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), Debouncing : debounce(logic) (debounce.vhd)]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : xil_defaultlib.ModMul]", 2, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (al, cp)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // af (al, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), Drive_OLED_Screen : oled_drive(behavioral) (oled_drive.vhd)]", 5, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // B (D, cp)
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd)]", 1, true); // B (D, cp) - Node
+selectButton(PAResourceItoN.MainToolbarMgr_OPEN, (String) null); // aA (f, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // af (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cp): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+String[] filenames16706 = {"C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/ModMul.vhd", "C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/MonPro.vhd"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 12 seconds
+dismissDialog("Add Sources"); // c (cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/ModMul.vhd C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/MonPro.vhd} 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd), MOD_MUL : ModMul(Behavioral) (ModMul.vhd)]", 2, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mod_mul_with_oled(behavioral) (mod_mul_with_oled.vhd)]", 1, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cp): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1669 ms.
+dismissDialog("Run Synthesis"); // A (cp)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// f (cp): Launch Runs: addNotify
