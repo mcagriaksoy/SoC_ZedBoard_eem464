@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../lab1_template/lab_1.1.srcs/sources_1/new/ModMul.vhd" \
+"../../../../lab1_template/lab_1.1.srcs/sources_1/new/MonPro.vhd" \
+"../../../../lab1_template/ascii_rom.vhd" \
+"../../../../lab1_template/bcd_ascii.vhd" \
+"../../../../lab1_template/debounce.vhd" \
+"../../../../lab1_template/delay.vhd" \
+"../../../../lab1_template/oled_drive.vhd" \
+"../../../../lab1_template/oled_init.vhd" \
+"../../../../lab1_template/spi_ctrl.vhd" \
+"../../../../lab1_template/mod_mul_with_oled.vhd" \
+
+# Do not sort compile order
+nosort

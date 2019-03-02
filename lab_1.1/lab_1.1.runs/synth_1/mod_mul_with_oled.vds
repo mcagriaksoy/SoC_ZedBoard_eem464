@@ -1,0 +1,744 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Mar  1 17:17:25 2019
+# Process ID: 9196
+# Current directory: C:/Users/mcagr/lab_1.1/lab_1.1.runs/synth_1
+# Command line: vivado.exe -log mod_mul_with_oled.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mod_mul_with_oled.tcl
+# Log file: C:/Users/mcagr/lab_1.1/lab_1.1.runs/synth_1/mod_mul_with_oled.vds
+# Journal file: C:/Users/mcagr/lab_1.1/lab_1.1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mod_mul_with_oled.tcl -notrace
+Command: synth_design -top mod_mul_with_oled -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5116 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 355.211 ; gain = 100.676
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'mod_mul_with_oled' [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:20]
+	Parameter counter_size bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/debounce.vhd:12' bound to instance 'Debouncing' of component 'debounce' [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/mcagr/lab_1.1/lab1_template/debounce.vhd:21]
+	Parameter counter_size bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [C:/Users/mcagr/lab_1.1/lab1_template/debounce.vhd:21]
+INFO: [Synth 8-3491] module 'oled_init' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/oled_init.vhd:12' bound to instance 'Initialize' of component 'oled_init' [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'oled_init' [C:/Users/mcagr/lab_1.1/lab1_template/oled_init.vhd:25]
+INFO: [Synth 8-3491] module 'spi_ctrl' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/spi_ctrl.vhd:13' bound to instance 'spi_comp' of component 'spi_ctrl' [C:/Users/mcagr/lab_1.1/lab1_template/oled_init.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'spi_ctrl' [C:/Users/mcagr/lab_1.1/lab1_template/spi_ctrl.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'spi_ctrl' (2#1) [C:/Users/mcagr/lab_1.1/lab1_template/spi_ctrl.vhd:23]
+INFO: [Synth 8-3491] module 'delay' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/delay.vhd:12' bound to instance 'delay_comp' of component 'delay' [C:/Users/mcagr/lab_1.1/lab1_template/oled_init.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'delay' [C:/Users/mcagr/lab_1.1/lab1_template/delay.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'delay' (3#1) [C:/Users/mcagr/lab_1.1/lab1_template/delay.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'oled_init' (4#1) [C:/Users/mcagr/lab_1.1/lab1_template/oled_init.vhd:25]
+INFO: [Synth 8-3491] module 'oled_drive' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:13' bound to instance 'Drive_OLED_Screen' of component 'oled_drive' [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'oled_drive' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:27]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_a3' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'bcd_ascii' (5#1) [C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:16]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_a2' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:162]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_a1' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:163]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_a0' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:164]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_b3' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:166]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_b2' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:167]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_b1' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:168]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_b0' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:169]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_n3' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:171]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_n2' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:172]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_n1' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:173]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_n0' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:174]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_z3' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:176]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_z2' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:177]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_z1' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:178]
+INFO: [Synth 8-3491] module 'bcd_ascii' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd:11' bound to instance 'bcd_conv_z0' of component 'bcd_ascii' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:179]
+INFO: [Synth 8-3491] module 'spi_ctrl' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/spi_ctrl.vhd:13' bound to instance 'spi_comp' of component 'spi_ctrl' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:187]
+INFO: [Synth 8-3491] module 'delay' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/delay.vhd:12' bound to instance 'delay_comp' of component 'delay' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+INFO: [Synth 8-3491] module 'ascii_rom' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/ascii_rom.vhd:12' bound to instance 'char_lib_comp' of component 'ascii_rom' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'ascii_rom' [C:/Users/mcagr/lab_1.1/lab1_template/ascii_rom.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'ascii_rom' (6#1) [C:/Users/mcagr/lab_1.1/lab1_template/ascii_rom.vhd:18]
+WARNING: [Synth 8-3848] Net temp_delay_ms in module/entity oled_drive does not have driver. [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:138]
+INFO: [Synth 8-256] done synthesizing module 'oled_drive' (7#1) [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:27]
+INFO: [Synth 8-3491] module 'mont_mult' declared at 'C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/mont_mult.vhd:6' bound to instance 'c0' of component 'mont_mult' [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'mont_mult' [C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/mont_mult.vhd:18]
+INFO: [Synth 8-3491] module 'MonPro' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/MonPro.vhd:9' bound to instance 'COMP1' of component 'MonPro' [C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/mont_mult.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'MonPro' [C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/MonPro.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'MonPro' (8#1) [C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/MonPro.vhd:15]
+INFO: [Synth 8-3491] module 'MonPro' declared at 'C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/MonPro.vhd:9' bound to instance 'COMP2' of component 'MonPro' [C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/mont_mult.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'mont_mult' (9#1) [C:/Users/mcagr/lab_1.1/lab_1.1.srcs/sources_1/new/mont_mult.vhd:18]
+WARNING: [Synth 8-3848] Net y0 in module/entity mod_mul_with_oled does not have driver. [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:96]
+WARNING: [Synth 8-3848] Net y1 in module/entity mod_mul_with_oled does not have driver. [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:96]
+WARNING: [Synth 8-3848] Net start in module/entity mod_mul_with_oled does not have driver. [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'mod_mul_with_oled' (10#1) [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:20]
+WARNING: [Synth 8-3331] design mont_mult has unconnected port clk
+WARNING: [Synth 8-3331] design mont_mult has unconnected port reset
+WARNING: [Synth 8-3331] design mont_mult has unconnected port start
+WARNING: [Synth 8-3331] design ascii_rom has unconnected port addr[10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 414.773 ; gain = 160.238
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[11] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[10] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[9] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[8] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[7] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[6] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[5] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[4] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[3] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[2] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[1] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+WARNING: [Synth 8-3295] tying undriven pin delay_comp:delay_ms[0] to constant 0 [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:196]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 414.773 ; gain = 160.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 414.773 ; gain = 160.238
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/mcagr/Desktop/lab1_template/constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [C:/Users/mcagr/Desktop/lab1_template/constraints.xdc:28]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [C:/Users/mcagr/Desktop/lab1_template/constraints.xdc:29]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [C:/Users/mcagr/Desktop/lab1_template/constraints.xdc:30]
+Finished Parsing XDC File [C:/Users/mcagr/Desktop/lab1_template/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/mcagr/Desktop/lab1_template/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mod_mul_with_oled_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mod_mul_with_oled_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.465 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.465 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 787.465 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 787.465 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 787.465 ; gain = 532.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 787.465 ; gain = 532.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 787.465 ; gain = 532.930
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'spi_ctrl'
+INFO: [Synth 8-5544] ROM "fin" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "shift_counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'delay'
+INFO: [Synth 8-5544] ROM "ms_counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "temp_delay_ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,7][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,8][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,9][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,10][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,11][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,12][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,13][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,14][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,15][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,1][7:0]' into 'current_screen_reg[0,1][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,2][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,7][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,8][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,9][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,10][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,11][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,12][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,13][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,14][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,15][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,1][7:0]' into 'current_screen_reg[0,1][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,2][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,7][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,8][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,9][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,10][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,11][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,12][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,13][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,14][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,15][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,1][7:0]' into 'current_screen_reg[0,1][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,2][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,7][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,8][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,9][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,10][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,11][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,12][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,13][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,14][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,15][7:0]' into 'current_screen_reg[0,2][7:0]' [C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd:226]
+INFO: [Synth 8-5546] ROM "fin" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "after_page_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "after_page_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "current_screen_reg[0,2]0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "after_update_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "after_char_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "init_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                               00
+                    send |                             0010 |                               01
+                    done |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'spi_ctrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                               00
+                    hold |                             0010 |                               01
+                    done |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'delay'
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:153]
+WARNING: [Synth 8-327] inferring latch for variable 'x_reg' [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:127]
+WARNING: [Synth 8-327] inferring latch for variable 'y_reg' [C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd:127]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 787.465 ; gain = 532.930
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 28    
+	                5 Bit    Registers := 9     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 16    
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	  10 Input     16 Bit        Muxes := 3     
+	  28 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  28 Input      8 Bit        Muxes := 5     
+	   4 Input      8 Bit        Muxes := 5     
+	   2 Input      7 Bit        Muxes := 1     
+	  28 Input      5 Bit        Muxes := 3     
+	  27 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 1     
+	  27 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 29    
+	  28 Input      1 Bit        Muxes := 19    
+	  27 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module mod_mul_with_oled 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	  10 Input     16 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	  10 Input      1 Bit        Muxes := 1     
+Module debounce 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module spi_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module delay 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module oled_init 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	  28 Input      5 Bit        Muxes := 1     
+	  28 Input      1 Bit        Muxes := 10    
+Module ascii_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module oled_drive 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 24    
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  28 Input     11 Bit        Muxes := 1     
+	  28 Input      8 Bit        Muxes := 5     
+	   4 Input      8 Bit        Muxes := 5     
+	  27 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  28 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	  27 Input      2 Bit        Muxes := 1     
+	  28 Input      1 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 5     
+	  27 Input      1 Bit        Muxes := 2     
+Module MonPro 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "Initialize/temp_delay_ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "Drive_OLED_Screen/after_page_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Drive_OLED_Screen/after_char_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6040] Register Drive_OLED_Screen/temp_addr_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+DSP Report: Generating DSP c0/COMP1/multOp, operation Mode is: A*B.
+DSP Report: operator c0/COMP1/multOp is absorbed into DSP c0/COMP1/multOp.
+DSP Report: Generating DSP c0/COMP1/multOp, operation Mode is: A*(B:0x69c9).
+DSP Report: operator c0/COMP1/multOp is absorbed into DSP c0/COMP1/multOp.
+DSP Report: Generating DSP c0/COMP1/plusOp, operation Mode is: PCIN+A*(B:0x79).
+DSP Report: operator c0/COMP1/plusOp is absorbed into DSP c0/COMP1/plusOp.
+DSP Report: operator c0/COMP1/multOp is absorbed into DSP c0/COMP1/plusOp.
+DSP Report: Generating DSP c0/COMP2/multOp, operation Mode is: A*(B:0x69c9).
+DSP Report: operator c0/COMP2/multOp is absorbed into DSP c0/COMP2/multOp.
+DSP Report: Generating DSP c0/COMP2/plusOp, operation Mode is: C+A*(B:0x79).
+DSP Report: operator c0/COMP2/plusOp is absorbed into DSP c0/COMP2/plusOp.
+DSP Report: operator c0/COMP2/multOp is absorbed into DSP c0/COMP2/plusOp.
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,6][0]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,5][0]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,6][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,4][0]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,6][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,4][0]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,4][0]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,6][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,6][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,5][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,5][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,5][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,5][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,4][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,4][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,4][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,4][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,3][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,3][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,3][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,3][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,4][0]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,3][0]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,3][0]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,2][0]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[0,2][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,2][7]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[0,2][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,1][0]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,1][7]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,0][7]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,0][7]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,0][7]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,0][7]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,0][0]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][1]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,0][0]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,0][0]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,0][0]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,6][1]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,5][1]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,4][1]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,4][1]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[3,4][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,3][1]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,3][1]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[3,4][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,2][1]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[0,2][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,1][1]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,0][1]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][2]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,0][1]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,0][1]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,0][1]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,6][2]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,5][2]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,4][2]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,4][2]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[3,4][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,3][2]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,3][2]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[3,4][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,2][2]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[0,2][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,1][2]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,0][2]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,0][2]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,0][2]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][3]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,0][2]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,6][3]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][4]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,5][3]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,4][3]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,4][3]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,3][3]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,3][3]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,6][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,2][3]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[0,2][4]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,1][3]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][4]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,0][3]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,0][3]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,0][3]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][4]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,0][3]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][4]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,6][4]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,5][4]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,5][4]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,4][4]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,4][4]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,3][4]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,4][4]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[3,3][4]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,2][4]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[0,2][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,1][4]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,0][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,0][4]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,0][4]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,0][4]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,1][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,0][4]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[0,0][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,6][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[1,6][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,6][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[2,6][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,6][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[3,6][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,6][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[0,5][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,5][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[1,5][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,5][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[2,5][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,5][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[3,5][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,5][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[0,4][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,4][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[1,4][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,4][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[2,4][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,4][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[3,4][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[3,4][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[0,3][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,3][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[1,3][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,3][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[2,3][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,3][5]' (FDSE) to 'Drive_OLED_Screen/current_screen_reg[3,3][5]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Drive_OLED_Screen/current_screen_reg[3,3][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Drive_OLED_Screen/current_screen_reg[0,2][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Drive_OLED_Screen/current_screen_reg[0,1][5] )
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[0,0][5]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[1,0][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[1,0][5]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[2,0][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,0][5]' (FDE) to 'Drive_OLED_Screen/current_screen_reg[3,0][5]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,6][6]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,5][6]'
+INFO: [Synth 8-3886] merging instance 'Drive_OLED_Screen/current_screen_reg[2,5][6]' (FDRE) to 'Drive_OLED_Screen/current_screen_reg[2,4][6]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Drive_OLED_Screen/current_screen_reg[2,3][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Drive_OLED_Screen/current_screen_reg[0,2][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Drive_OLED_Screen/current_screen_reg[0,1][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Drive_OLED_Screen/after_char_state_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Drive_OLED_Screen/after_update_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Drive_OLED_Screen/after_char_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Drive_OLED_Screen/after_update_state_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Initialize/temp_dc_reg )
+WARNING: [Synth 8-3332] Sequential element (Initialize/spi_comp/FSM_onehot_current_state_reg[3]) is unused and will be removed from module mod_mul_with_oled.
+WARNING: [Synth 8-3332] Sequential element (Initialize/delay_comp/FSM_onehot_current_state_reg[3]) is unused and will be removed from module mod_mul_with_oled.
+WARNING: [Synth 8-3332] Sequential element (Drive_OLED_Screen/spi_comp/FSM_onehot_current_state_reg[3]) is unused and will be removed from module mod_mul_with_oled.
+WARNING: [Synth 8-3332] Sequential element (Drive_OLED_Screen/delay_comp/FSM_onehot_current_state_reg[3]) is unused and will be removed from module mod_mul_with_oled.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Drive_OLED_Screen/current_screen_reg[3,3][6] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 787.465 ; gain = 532.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+------------------------------------------+---------------+----------------+
+|Module Name       | RTL Object                               | Depth x Width | Implemented As | 
++------------------+------------------------------------------+---------------+----------------+
+|oled_init         | after_state                              | 32x1          | LUT            | 
+|oled_init         | after_state                              | 32x5          | LUT            | 
+|oled_init         | temp_sdata                               | 32x1          | LUT            | 
+|oled_init         | temp_sdata                               | 32x8          | LUT            | 
+|oled_drive        | after_state                              | 32x1          | LUT            | 
+|oled_drive        | temp_addr                                | 32x1          | LUT            | 
+|mod_mul_with_oled | Initialize/after_state                   | 32x5          | LUT            | 
+|mod_mul_with_oled | Initialize/temp_sdata                    | 32x8          | LUT            | 
+|mod_mul_with_oled | Initialize/after_state                   | 32x1          | LUT            | 
+|mod_mul_with_oled | Initialize/temp_sdata                    | 32x1          | LUT            | 
+|mod_mul_with_oled | Drive_OLED_Screen/after_state            | 32x1          | LUT            | 
+|mod_mul_with_oled | Drive_OLED_Screen/temp_addr              | 32x1          | LUT            | 
+|mod_mul_with_oled | Drive_OLED_Screen/char_lib_comp/dout_reg | 1024x8        | Block RAM      | 
++------------------+------------------------------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|MonPro      | A*B             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|MonPro      | A*(B:0x69c9)    | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|MonPro      | PCIN+A*(B:0x79) | 15     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|MonPro      | A*(B:0x69c9)    | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|MonPro      | C+A*(B:0x79)    | 15     | 7      | 16     | -      | 23     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/Drive_OLED_Screen/char_lib_comp/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 827.410 ; gain = 572.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 853.926 ; gain = 599.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance Drive_OLED_Screen/char_lib_comp/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 858.887 ; gain = 604.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 858.887 ; gain = 604.352
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 858.887 ; gain = 604.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 858.887 ; gain = 604.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 858.887 ; gain = 604.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 858.887 ; gain = 604.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 858.887 ; gain = 604.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    28|
+|3     |DSP48E1   |     4|
+|4     |DSP48E1_1 |     1|
+|5     |LUT1      |    27|
+|6     |LUT2      |    30|
+|7     |LUT3      |    60|
+|8     |LUT4      |    51|
+|9     |LUT5      |    70|
+|10    |LUT6      |    86|
+|11    |MUXF7     |     2|
+|12    |RAMB18E1  |     1|
+|13    |FDCE      |     4|
+|14    |FDRE      |   256|
+|15    |FDSE      |     9|
+|16    |LD        |    36|
+|17    |IBUF      |    11|
+|18    |OBUF      |     6|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------------+------------+------+
+|      |Instance            |Module      |Cells |
++------+--------------------+------------+------+
+|1     |top                 |            |   683|
+|2     |  Debouncing        |debounce    |    44|
+|3     |  Drive_OLED_Screen |oled_drive  |   353|
+|4     |    bcd_conv_a0     |bcd_ascii   |     5|
+|5     |    bcd_conv_a1     |bcd_ascii_1 |     5|
+|6     |    bcd_conv_a2     |bcd_ascii_2 |     5|
+|7     |    bcd_conv_a3     |bcd_ascii_3 |     5|
+|8     |    bcd_conv_b0     |bcd_ascii_4 |     5|
+|9     |    bcd_conv_b1     |bcd_ascii_5 |     5|
+|10    |    bcd_conv_b2     |bcd_ascii_6 |     5|
+|11    |    bcd_conv_b3     |bcd_ascii_7 |     5|
+|12    |    char_lib_comp   |ascii_rom   |     5|
+|13    |    delay_comp      |delay_8     |    58|
+|14    |    spi_comp        |spi_ctrl_9  |    47|
+|15    |  Initialize        |oled_init   |   162|
+|16    |    delay_comp      |delay       |    59|
+|17    |    spi_comp        |spi_ctrl    |    49|
+|18    |  c0                |mont_mult   |    50|
+|19    |    COMP1           |MonPro      |    38|
+|20    |    COMP2           |MonPro_0    |    12|
++------+--------------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 858.887 ; gain = 604.352
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 858.887 ; gain = 231.660
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 858.887 ; gain = 604.352
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 72 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 858.887 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 36 instances were transformed.
+  LD => LDCE: 36 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+235 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 858.887 ; gain = 610.250
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 858.887 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/mcagr/lab_1.1/lab_1.1.runs/synth_1/mod_mul_with_oled.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mod_mul_with_oled_utilization_synth.rpt -pb mod_mul_with_oled_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Mar  1 17:18:19 2019...

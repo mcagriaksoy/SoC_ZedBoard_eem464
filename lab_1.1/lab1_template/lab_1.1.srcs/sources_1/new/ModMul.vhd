@@ -3,31 +3,33 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_unsigned.all;
 
 entity ModMul is 
-port(x : in INTEGER range 0 to 9999;
-	 y : in INTEGER range 0 to 9999;
-	 clk: in std_logic;
-	 reset: in std_logic; 
-	 start: in std_logic;
-	 z: out INTEGER range 0 to 9999;
-	 done1: out std_logic );
+port(
+    x : in std_logic_vector(7 downto 0);
+	y : in std_logic_vector(7 downto 0);
+	clk: in std_logic;
+	reset: in std_logic; 
+	start: in std_logic;
+	z: out std_logic_vector(7 downto 0);
+	done1: out std_logic
+	);
 end ModMul;
 
 architecture Behavioral of ModMul is
    component MonPro is
-        port(a_mon : in INTEGER range 0 to 9999;
-	         b_mon : in INTEGER range 0 to 9999;
-	         returns :out INTEGER range 0 to 9999);
+        port(a_mon : in std_logic_vector(7 downto 0);
+	         b_mon : in std_logic_vector(7 downto 0);
+	         returns :out std_logic_vector(7 downto 0);
     end component;
     
-signal x_mon,y_mon,z_mon : INTEGER range 0 to 9999;
-signal t,m,u : INTEGER range 0 to 9999;
-signal k,l,o : INTEGER range 0 to 9999;
     
 constant r :INTEGER:= 2**(16);
 constant n :INTEGER:= 121;
 begin
-    x_mon <= (x*r) mod n;
-    y_mon <= (y*r) mod n ;
+   r1 = std_logic_vector(to_unsigned(r,U'length));
+   temp = a*r1
+   a_mon = a*r1 (15 downto 0);
+   
+   
     
     process(clk)
         begin

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Mar  1 17:17:25 2019
+# Process ID: 9196
+# Current directory: C:/Users/mcagr/lab_1.1/lab_1.1.runs/synth_1
+# Command line: vivado.exe -log mod_mul_with_oled.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mod_mul_with_oled.tcl
+# Log file: C:/Users/mcagr/lab_1.1/lab_1.1.runs/synth_1/mod_mul_with_oled.vds
+# Journal file: C:/Users/mcagr/lab_1.1/lab_1.1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mod_mul_with_oled.tcl -notrace
