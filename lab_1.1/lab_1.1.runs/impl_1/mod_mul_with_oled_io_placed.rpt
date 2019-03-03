@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Fri Mar  1 17:19:22 2019
+| Date                      : Sun Mar  3 15:00:42 2019
 | Host                      : DESKTOP-FQHR785 running 64-bit major release  (build 9200)
 | Command                   : report_io -file mod_mul_with_oled_io_placed.rpt
 | Design                    : mod_mul_with_oled
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            17 |
+|            18 |
 +---------------+
 
 
@@ -404,7 +404,7 @@ Table of Contents
 | R15        |             | High Range | IO_25_34                | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R16        | en          | High Range | IO_L24N_T3_34           | INPUT       | LVCMOS18    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | R17        |             |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| R18        |             | High Range | IO_L23P_T3_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| R18        | start       | High Range | IO_L23P_T3_34           | INPUT       | LVCMOS18    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | R19        |             | High Range | IO_L22P_T3_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R20        |             | High Range | IO_L17P_T2_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R21        |             | High Range | IO_L17N_T2_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

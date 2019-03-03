@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Mar  1 17:19:23 2019
+| Date         : Sun Mar  3 15:00:42 2019
 | Host         : DESKTOP-FQHR785 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file mod_mul_with_oled_control_sets_placed.rpt
 | Design       : mod_mul_with_oled
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    32 |
-| Unused register locations in slices containing registers |   111 |
+| Number of unique control sets                            |    34 |
+| Unused register locations in slices containing registers |    98 |
 +----------------------------------------------------------+-------+
 
 
@@ -39,9 +39,10 @@ Table of Contents
 |      5 |            8 |
 |      6 |            1 |
 |      7 |            2 |
-|      8 |            5 |
+|      8 |            6 |
 |     10 |            1 |
 |     12 |            2 |
+|     13 |            1 |
 |    16+ |            6 |
 +--------+--------------+
 
@@ -52,53 +53,55 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              55 |           25 |
-| No           | No                    | Yes                    |               4 |            1 |
-| No           | Yes                   | No                     |              57 |           18 |
-| Yes          | No                    | No                     |              56 |           19 |
+| No           | No                    | No                     |              23 |           12 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              57 |           17 |
+| Yes          | No                    | No                     |             112 |           32 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             133 |           41 |
+| Yes          | Yes                   | No                     |             142 |           47 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------+-------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+
-|             Clock Signal            |                     Enable Signal                     |                         Set/Reset Signal                        | Slice Load Count | Bel Load Count |
-+-------------------------------------+-------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG                      | Initialize/temp_vbat_i_1_n_0                          |                                                                 |                1 |              1 |
-|  clk_IBUF_BUFG                      | Initialize/temp_vdd_i_1_n_0                           |                                                                 |                1 |              1 |
-|  Initialize/E[0]                    |                                                       |                                                                 |                1 |              4 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/after_char_state_0                  |                                                                 |                3 |              4 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/g0_b0__1_n_0                        |                                                                 |                1 |              4 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/temp_sdata[5]_i_1_n_0               |                                                                 |                2 |              4 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/temp_sdata[5]_i_1_n_0               | Drive_OLED_Screen/temp_sdata[7]_i_1_n_0                         |                2 |              4 |
-|  clk_IBUF_BUFG                      |                                                       | Initialize/spi_comp/counter                                     |                2 |              5 |
-|  clk_IBUF_BUFG                      |                                                       | Drive_OLED_Screen/spi_comp/counter                              |                1 |              5 |
-|  clk_IBUF_BUFG                      | Initialize/delay_comp/E[0]                            | rst_IBUF                                                        |                2 |              5 |
-|  clk_IBUF_BUFG                      | Initialize/spi_comp/temp_sdata                        | Initialize/spi_comp/FSM_onehot_current_state_reg_n_0_[0]        |                1 |              5 |
-|  clk_IBUF_BUFG                      | Initialize/g0_b0__3_n_0                               |                                                                 |                2 |              5 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/delay_comp/E[0]                     |                                                                 |                2 |              5 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/spi_comp/temp_sdata                 | Drive_OLED_Screen/spi_comp/FSM_onehot_current_state_reg_n_0_[0] |                2 |              5 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/after_page_state                    | Drive_OLED_Screen/after_page_state[2]_i_1_n_0                   |                2 |              5 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/after_char_state_0                  | Drive_OLED_Screen/temp_char[6]_i_1_n_0                          |                3 |              6 |
-|  clk_IBUF_BUFG                      | Initialize/spi_comp/shift_register                    |                                                                 |                1 |              7 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/spi_comp/shift_register             |                                                                 |                2 |              7 |
-|  clk_IBUF_BUFG                      | Initialize/g0_b0__4_n_0                               |                                                                 |                1 |              8 |
-|  Debouncing/E[1]                    |                                                       |                                                                 |                3 |              8 |
-|  Debouncing/E[0]                    |                                                       |                                                                 |                4 |              8 |
-|  Debouncing/current_state_reg[3][1] |                                                       |                                                                 |                4 |              8 |
-|  Debouncing/current_state_reg[3][0] |                                                       |                                                                 |                3 |              8 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/g0_b0__2_n_0                        |                                                                 |                3 |             10 |
-|  clk_IBUF_BUFG                      | Initialize/delay_comp/ms_counter[0]_i_2_n_0           | Initialize/delay_comp/ms_counter                                |                3 |             12 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/delay_comp/ms_counter[0]_i_2__0_n_0 | Drive_OLED_Screen/delay_comp/ms_counter                         |                3 |             12 |
-|  clk_IBUF_BUFG                      |                                                       | Initialize/delay_comp/clk_counter[0]_i_1_n_0                    |                5 |             17 |
-|  clk_IBUF_BUFG                      |                                                       | rst_IBUF                                                        |                6 |             17 |
-|  clk_IBUF_BUFG                      |                                                       | Drive_OLED_Screen/delay_comp/clk_counter[0]_i_1__0_n_0          |                5 |             17 |
-|  clk_IBUF_BUFG                      |                                                       |                                                                 |               10 |             19 |
-|  clk_IBUF_BUFG                      | Debouncing/sel                                        | Debouncing/counter_set                                          |                6 |             21 |
-|  clk_IBUF_BUFG                      | Drive_OLED_Screen/current_screen[3,6]                 | Drive_OLED_Screen/current_screen[3,15]                          |               17 |             58 |
-+-------------------------------------+-------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+
++----------------+-------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+
+|  Clock Signal  |                     Enable Signal                     |                         Set/Reset Signal                        | Slice Load Count | Bel Load Count |
++----------------+-------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | Initialize/temp_vdd_i_1_n_0                           |                                                                 |                1 |              1 |
+|  clk_IBUF_BUFG | Initialize/temp_vbat_i_1_n_0                          |                                                                 |                1 |              1 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/after_char_state_0                  |                                                                 |                1 |              4 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/temp_sdata[5]_i_1_n_0               |                                                                 |                2 |              4 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/temp_sdata[5]_i_1_n_0               | Drive_OLED_Screen/temp_sdata[7]_i_1_n_0                         |                2 |              4 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/g0_b0__1_n_0                        |                                                                 |                2 |              4 |
+|  clk_IBUF_BUFG | Debouncing/current_state_reg[3]_2[0]                  | rst_IBUF                                                        |                2 |              4 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/spi_comp/temp_sdata                 | Drive_OLED_Screen/spi_comp/FSM_onehot_current_state_reg_n_0_[0] |                1 |              5 |
+|  clk_IBUF_BUFG |                                                       | Initialize/spi_comp/counter                                     |                1 |              5 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/after_page_state                    | Drive_OLED_Screen/after_page_state[2]_i_1_n_0                   |                2 |              5 |
+|  clk_IBUF_BUFG |                                                       | Drive_OLED_Screen/spi_comp/counter                              |                1 |              5 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/delay_comp/E[0]                     |                                                                 |                2 |              5 |
+|  clk_IBUF_BUFG | Initialize/delay_comp/E[0]                            | rst_IBUF                                                        |                2 |              5 |
+|  clk_IBUF_BUFG | Initialize/spi_comp/temp_sdata                        | Initialize/spi_comp/FSM_onehot_current_state_reg_n_0_[0]        |                1 |              5 |
+|  clk_IBUF_BUFG | Initialize/g0_b0__3_n_0                               |                                                                 |                1 |              5 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/after_char_state_0                  | Drive_OLED_Screen/temp_char[6]_i_1_n_0                          |                4 |              6 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/spi_comp/shift_register             |                                                                 |                2 |              7 |
+|  clk_IBUF_BUFG | Initialize/spi_comp/shift_register                    |                                                                 |                1 |              7 |
+|  clk_IBUF_BUFG | Initialize/g0_b0__4_n_0                               |                                                                 |                1 |              8 |
+|  clk_IBUF_BUFG | COMP2/Initialize/p_0_in                               |                                                                 |                4 |              8 |
+|  clk_IBUF_BUFG | Debouncing/current_state_reg[2][1]                    |                                                                 |                3 |              8 |
+|  clk_IBUF_BUFG | Debouncing/E[1]                                       |                                                                 |                1 |              8 |
+|  clk_IBUF_BUFG | Debouncing/current_state_reg[2][0]                    |                                                                 |                1 |              8 |
+|  clk_IBUF_BUFG | Debouncing/E[0]                                       |                                                                 |                1 |              8 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/g0_b0__2_n_0                        |                                                                 |                2 |             10 |
+|  clk_IBUF_BUFG | Initialize/delay_comp/ms_counter[0]_i_2_n_0           | Initialize/delay_comp/ms_counter                                |                3 |             12 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/delay_comp/ms_counter[0]_i_2__0_n_0 | Drive_OLED_Screen/delay_comp/ms_counter                         |                3 |             12 |
+|  clk_IBUF_BUFG |                                                       | rst_IBUF                                                        |                5 |             13 |
+|  clk_IBUF_BUFG | COMP1/t0                                              |                                                                 |                6 |             16 |
+|  clk_IBUF_BUFG |                                                       | Initialize/delay_comp/clk_counter[0]_i_1_n_0                    |                5 |             17 |
+|  clk_IBUF_BUFG |                                                       | Drive_OLED_Screen/delay_comp/clk_counter[0]_i_1__0_n_0          |                5 |             17 |
+|  clk_IBUF_BUFG | Debouncing/sel                                        | Debouncing/counter_set                                          |                6 |             21 |
+|  clk_IBUF_BUFG |                                                       |                                                                 |               12 |             23 |
+|  clk_IBUF_BUFG | Drive_OLED_Screen/current_screen[3,6]                 | Drive_OLED_Screen/current_screen[3,15]                          |               21 |             63 |
++----------------+-------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+
 
 

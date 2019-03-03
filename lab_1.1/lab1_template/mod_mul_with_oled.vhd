@@ -95,7 +95,7 @@ END component;
     --KODDDDDD--
     signal n  :unsigned(15 downto 0) := "0000000001111001";
     signal z_temp  :unsigned(15 downto 0);
-    signal temp: unsigned(7 downto 0) := (others => '0');
+    signal temp: unsigned(15 downto 0);
     signal start1 : std_logic ;
     signal z,x,y : std_logic_vector(15 downto 0) := (others => '0');
     
@@ -145,40 +145,38 @@ begin
     a_reg <= x;
     b_reg <= y;
     n_reg <= std_logic_vector(n);
+    z_reg <= std_logic_vector(z_temp);
     
-    process (clk,rst)
-    begin     
+    process (clk)
+    begin
+    if rising_edge(clk) then
             if rst = '1' then
                 current_state <= Idle;
                 start_mult <= '0';
                 
-
-            elsif (clk'event and clk='1') then
-                current_state <= next_state;
-            end if;
-     end process;
-
-            process(clk,current_state,sw_in,en_db,en,init_done,example_done)
-                begin
+                
+            else
                 case current_state is
                     when Idle =>
-                        next_state <= OledInitialize;
+                        current_state <= OledInitialize;
                     -- Go through the initialization sequence
                     when OledInitialize =>
                         if init_done = '1' then
-                            next_state <= OledExample;
+                            current_state <= OledExample;
+                            next_state <= LoadA_0;
                         end if;
                         
                     -- Do example and do nothing when finished
                     when OledExample =>
                         if example_done = '1' then
-                            next_state <= LoadA_0;
+                            current_state <= next_state;
                         end if;    
                     
                     when LoadA_0 =>
                         
                         if en_db = '1' then
                             x(7 downto 0) <= sw_in;
+                            current_state <= OledExample;
                             next_state <= LoadA_1;
                         else
                             next_state <= LoadA_0;
@@ -186,6 +184,7 @@ begin
                    when LoadA_1 =>
                         if en_db = '1' then
                             x(15 downto 8) <= sw_in;
+                            current_state <= OledExample;
                             next_state <= LoadB_0;
                         else
                             next_state <= LoadA_1;
@@ -193,6 +192,7 @@ begin
                     when LoadB_0 =>      
                         if en_db = '1' then
                             y(7 downto 0) <= sw_in;
+                            current_state <= OledExample;
                             next_state <= LoadB_1;
                         else
                             next_state <= LoadB_0;
@@ -200,23 +200,27 @@ begin
                     when LoadB_1 =>
                         if en_db = '1' then
                             y(15 downto 8) <= sw_in;
+                            current_state <= OledExample;
                             next_state <= WaitMult ;
                         else
                             next_state <= LoadB_1;
                         end if;
                     when WaitMult =>     
-                        if start = '1' then          
-                            next_state <= Done;
+                        if start = '1' then
+                            current_state <= OledExample;
+                            next_state <= Done;          
                         else
                             next_state <= WaitMult;
                         end if;
                       
+                   -- Do nothing
                     when Done =>
-                        next_state <= Done;
-                        
+                        current_state <= Done;
                     when others =>
-                        next_state <= Idle;
+                        current_state <= Idle;
                 end case;
-        end process;
+            end if;
+        end if;
+    end process;
 
 end behavioral;

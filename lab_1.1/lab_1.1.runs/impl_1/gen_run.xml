@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1551449911">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1551614390">
   <File Type="BITSTR-BMM" Name="mod_mul_with_oled_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="mod_mul_with_oled_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="mod_mul_with_oled_timing_summary_init.rpt"/>
@@ -96,12 +96,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/lab1_template/delay.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/mont_mult.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

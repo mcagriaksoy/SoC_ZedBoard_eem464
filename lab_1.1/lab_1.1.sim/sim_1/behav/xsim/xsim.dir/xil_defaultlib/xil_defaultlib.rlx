@@ -1,0 +1,14 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/mcagr/lab_1.1/lab1_template/ascii_rom.vhd,1550564215,vhdl,,,,ascii_rom,,,,,,,,
+C:/Users/mcagr/lab_1.1/lab1_template/bcd_ascii.vhd,1550564931,vhdl,,,,bcd_ascii,,,,,,,,
+C:/Users/mcagr/lab_1.1/lab1_template/debounce.vhd,1550564081,vhdl,,,,debounce,,,,,,,,
+C:/Users/mcagr/lab_1.1/lab1_template/delay.vhd,1550564034,vhdl,,,,delay,,,,,,,,
+C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/ModMul.vhd,1550924421,vhdl,,,,modmul,,,,,,,,
+C:/Users/mcagr/lab_1.1/lab1_template/lab_1.1.srcs/sources_1/new/MonPro.vhd,1550924082,vhdl,,,,monpro,,,,,,,,
+C:/Users/mcagr/lab_1.1/lab1_template/mod_mul_with_oled.vhd,1550924993,vhdl,,,,mod_mul_with_oled,,,,,,,,
+C:/Users/mcagr/lab_1.1/lab1_template/oled_drive.vhd,1550565347,vhdl,,,,oled_drive,,,,,,,,
+C:/Users/mcagr/lab_1.1/lab1_template/oled_init.vhd,1550564101,vhdl,,,,oled_init,,,,,,,,
+C:/Users/mcagr/lab_1.1/lab1_template/spi_ctrl.vhd,1550564022,vhdl,,,,spi_ctrl,,,,,,,,
