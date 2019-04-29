@@ -1,34 +1,4 @@
-/******************************************************************************
-*
-* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to deal
-* in the Software without restriction, including without limitation the rights
-* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in
-* all copies or substantial portions of the Software.
-*
-* Use of the Software is limited solely to applications:
-* (a) running on a Xilinx device, or
-* (b) that interact with a Xilinx device through a bus or interconnect.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
-* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-* SOFTWARE.
-*
-* Except as contained in this notice, the name of the Xilinx shall not be used
-* in advertising or otherwise to promote the sale, use or other dealings in
-* this Software without prior written authorization from Xilinx.
-*
-******************************************************************************/
+// Mehmet_Cagri_Aksoy
 
 #include <stdio.h>
 #include "xparameters.h"
@@ -40,31 +10,13 @@
 #include "memory_config.h"
 #include "xil_printf.h"
 
-/*
- * memory_test.c: Test memory ranges present in the Hardware Design.
- *
- * This application runs with D-Caches disabled. As a result cacheline requests
- * will not be generated.
- *
- * For MicroBlaze/PowerPC, the BSP doesn't enable caches and this application
- * enables only I-Caches. For ARM, the BSP enables caches by default, so this
- * application disables D-Caches before running memory tests.
- */
 
 void putnum(unsigned int num);
+void read(u32 *Addr);
+void write(u32 *Addr);
 
 void test_memory_range(struct memory_range_s *range) {
     XStatus status;
-
-    /* This application uses print statements instead of xil_printf/printf
-     * to reduce the text size.
-     *
-     * The default linker script generated for this application does not have
-     * heap memory allocated. This implies that this program cannot use any
-     * routines that allocate memory on heap (printf is one such function).
-     * If you'd like to add such functions, then please generate a linker script
-     * that does allocate sufficient heap memory.
-     */
 
     print("Testing memory region: "); print(range->name);  print("\n\r");
     print("    Memory Controller: "); print(range->ip);  print("\n\r");
@@ -76,7 +28,7 @@ void test_memory_range(struct memory_range_s *range) {
         xil_printf("                 Size: 0x%lx bytes \n\r",range->size);
     #endif
 
-    status = Xil_TestMem32((u32*)range->base, 1024, 0xAAAA5555, XIL_TESTMEM_ALLMEMTESTS);
+    status = Xil_TestMem32((u32*)range->base,1024, 0xAAAA5555, XIL_TESTMEM_ALLMEMTESTS);
     print("          32-bit test: "); print(status == XST_SUCCESS? "PASSED!":"FAILED!"); print("\n\r");
 
     status = Xil_TestMem16((u16*)range->base, 2048, 0xAA55, XIL_TESTMEM_ALLMEMTESTS);
@@ -86,52 +38,112 @@ void test_memory_range(struct memory_range_s *range) {
     print("           8-bit test: "); print(status == XST_SUCCESS? "PASSED!":"FAILED!"); print("\n\r");
 
 }
-void mult(int arr1[2][3], int arr2[3][2], int result[2][2]){
+void read(u32 *Addr){
 
-	 int i, j, k = 0;
+	u32 arr1_res[2][3];
+	u32 arr2_res[3][2];
+	int i,j,k = 0;
+	u32 I, I2;
+	u32 Words = 512;
+	u32 result[2][2];
+	I=0U;
 
-	        for (i = 0; i < 2; i++) {
-	          for (j = 0; j < 2; j++) {
-	            result[i][j] = 0;
-	            for (k = 0; k < 3; k++) {
-	              result[i][j] += arr1[i][k]*arr2[k][j];
-	            }
-	          }
-	        }
+	//for (I = 0U; I < Words; I++) {
+			for(i = 0; i < 2; i++){
 
-	        printf("Product of the matrices:\n a.b = \n");
+				for (j = 0; j < 3; j++) {
+					 arr1_res[i][j]=*(Addr+I);
+					 xil_printf("\n\rarr1_res red[%d][%d]=%d\r\n",i,j,arr1_res[i][j]);
+					 I = I + 4;
+				}
 
-	        for (i = 0; i < 2; i++) {
-	          for (j = 0; j < 2; j++)
-	            printf("%d\t", result[i][j]);
+			}
+		//}
+			I2 = I ;
+	//for (I2 = I ; I2 < Words*2; I2++) {
+			for(i = 0; i < 3; i++){
 
-	          printf("\n");
-	        }
+				for (j = 0; j < 2; j++) {
+					arr2_res[i][j]=*(Addr+I2);
+					xil_printf("\n\rarr2_res read[%d][%d]=%d\r\n",i,j,arr2_res[i][j]);
+					I2= I2 + 4;
+				}
+
+			}
+		//}
+
+	  for (i = 0; i < 2; i++) {
+		 for (j = 0; j < 2; j++) {
+		    result[i][j] = 0;
+		       for (k = 0; k < 3; k++) {
+		         result[i][j] += arr1_res[i][k]*arr2_res[k][j];
+		            }
+		          }
+		        }
+
+		        printf("Product of the matrices:\n a.b = \n");
+
+		        for (i = 0; i < 2; i++) {
+		          for (j = 0; j < 2; j++)
+		            printf("%d\t", result[i][j]);
+
+		          printf("\n");
+		        }
+
 
 }
+void write(u32 *Addr){
+	xil_printf("\nArrays are writing to DDR memory...%p", *Addr);
+	u32 arr1[ 2 ][ 3 ] = { { 5, 6, 7 }, { 10, 20, 30 } };
+	u32 arr2[ 3 ][ 2 ] = { { 1, 2 }, { 2,  1 }, {1 , 1} };
 
+	u32 I,I2 ;
+	int i, j = 0;
+	u32 Words = 1024 ;
+
+	//write arr1 into the DDR:
+	//for (I = 0U; I < Words; I++) {
+	I=0U;
+		for(i = 0; i < 2; i++){
+
+			for (j = 0; j < 3; j++) {
+				*(Addr+I) = arr1[i][j];
+				I=I+4;
+			}
+
+		}
+	//}
+
+	//write arr2 into the DDR:
+	//for (I2 = I; I2 < Words*2; I2++) {
+		I2 = I;
+			for(i = 0; i < 3; i++){
+
+				for (j = 0; j < 2; j++) {
+					*(Addr+I2) = arr2[i][j];
+					xil_printf("\n\rarr2_res write[%d][%d]=%d\r\n",i,j,*(Addr+I2));
+					I2 = I2 + 4 ;
+				}
+
+			}
+		//}
+	printf("\nwriting process is finished");
+	//read(*Addr);
+
+}
 
 int main()
 {
 	init_platform();
 	int i;
 
-	//Multiplication Part:
-	int arr1[ 2 ][ 3 ] = { { 5, 6, 7 }, { 10, 20, 30 } };
-	int arr2[ 3 ][ 2 ] = { { 1, 2 }, { 2,  1 }, {4 , 0} };
-	int result[2][2];
-	mult(arr1, arr2, result);
+	for (i = 0; i < 1; i++) {
+	   //test_memory_range(&memory_ranges[i]);
+	   write((u32*)&(memory_ranges[i].base));
+	   read((u32*)&(memory_ranges[i].base));
+	}
 
 
-    print("--Starting Memory Test Application--\n\r");
-    print("NOTE: This application runs with D-Cache disabled.");
-    print("As a result, cacheline requests will not be generated\n\r");
-
-    for (i = 0; i < n_memory_ranges; i++) {
-        test_memory_range(&memory_ranges[i]);
-    }
-
-    print("--Memory Test Application Complete--\n\r");
 
     cleanup_platform();
     return 0;
